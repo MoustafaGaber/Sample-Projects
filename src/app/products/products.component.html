@@ -1,0 +1,25 @@
+<h1>{{title | uppercase}}</h1>
+<p>
+  products works!
+</p>
+<div style="padding-left: 10px">
+  <p >The hero's birthday is {{ birthday | date:format }}</p>
+  <button type="button" class="btn btn-success" 
+  (click)="toggleFormat()"  >Toggle Format</button>
+</div>
+<br>
+
+
+<div    >
+  <input style="width:100px" type="button"  (click)="myfunction()"
+   [class]="btnstyle" [value]="btnvalue">
+</div>
+<br>
+<div *ngIf="mytoggle; then welcome else error"></div>
+<ng-template #welcome>
+  <h1 style="color:green">Welcom to my App</h1>
+</ng-template>
+<ng-template #error>
+  <h1 style="color:red">Please login  to my App</h1>
+</ng-template>
+

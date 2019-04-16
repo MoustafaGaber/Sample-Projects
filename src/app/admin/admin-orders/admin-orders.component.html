@@ -1,0 +1,23 @@
+<p>
+  admin-orders works!
+</p>
+<h1>{{ dayDate | date:format }}</h1>
+<div>
+  <input style=" width:100px" type="button" (click)="function()" 
+  [class]="btnclass" [value]="btnvalue">
+</div>
+<br>
+<div *ngIf="toggle; then welcome else error"></div>
+<ng-template #welcome>
+  <h1 style="color:green">Welcome to my App</h1>
+</ng-template >
+<ng-template #error>
+  <h1 style="color:red">Please login to my App</h1>
+</ng-template>
+<div>
+  <br>
+  <label>Name:<br>
+   <input type='text' [(ngModel)]="textvalue">
+    </label>
+    <h1>{{textvalue}}</h1>
+</div>

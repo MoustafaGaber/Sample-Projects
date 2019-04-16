@@ -1,0 +1,35 @@
+
+<h1>
+  myorder works!
+</h1>
+
+<div><h1>the day date is {{dayDate | date:format}}</h1></div>
+<div>
+  <input Class='btn btn-success' type="button" [value]='btnvalue' (click)="mytogglefunc()">
+</div>
+<br>
+
+
+<div >
+
+  <label>name:
+  <input type="text" [(ngModel)]="name">
+</label>
+<p>
+  {{ name | uppercase }}
+</p>
+
+<br>
+<div>
+  <button  [class]='btnclass' 
+   (click)='btnfunction()'>  {{btnvalue1}}</button>
+</div>
+<br>
+<div *ngIf='mytoggle; then welcome else error' ></div>
+<ng-template #welcome>
+  <h1 style='color:green'>Welcome to my App</h1>
+</ng-template>
+<ng-template #error>
+    <h1 style='color:red'>Please login  to my App</h1>
+  </ng-template>
+  

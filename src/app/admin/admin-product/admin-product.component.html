@@ -1,0 +1,28 @@
+<p>
+  admin-product works!
+</p>
+<div>
+  <h1>{{myDate | date:format}}</h1>
+</div>
+<div>
+  <input type="button" [class]="btnclass" [value]="btnvalue" 
+    (click)="function()">
+</div>
+<br>
+<div *ngIf="toggle; then logout else login"></div>
+<ng-template #logout>
+  <h1 style="color:green">Wecome To my App</h1>
+</ng-template>
+<ng-template #login>
+  <h1 style="color:red">Wecome To my App</h1>
+</ng-template>
+<br>
+<div>
+  <label>
+    Name:<br>
+    <input type="text" [(ngModel)]="textvalue">
+  </label>
+  <br>
+  <label>Text Box Value is : <p>{{textvalue | uppercase}}</p></label>
+</div>
+    
